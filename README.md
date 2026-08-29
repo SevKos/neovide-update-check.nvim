@@ -1,4 +1,3 @@
-
 # neovide-update-check.nvim
 
 A small Neovim plugin that checks whether a newer version of [Neovide](https://neovide.dev/) is available.
@@ -9,9 +8,9 @@ The plugin only operates when Neovim is running inside Neovide.
 
 ## Requirements
 
-* Neovim 0.11+
-* Neovide
-* `curl`
+- Neovim 0.11+
+- Neovide
+- `curl`
 
 ## Installation
 
@@ -22,8 +21,9 @@ Add the plugin to your Lazy.nvim configuration:
 ```lua
 return {
   {
-    "sevdev/neovide-update-check.nvim",
+    "sevkos/neovide-update-check.nvim",
     lazy = false,
+    opts = {},
   },
 }
 ```
@@ -51,7 +51,7 @@ You can change the keymap during installation:
 ```lua
 return {
   {
-    "sevdev/neovide-update-check.nvim",
+    "sevkos/neovide-update-check.nvim",
     lazy = false,
     opts = {
       keymap = "<leader>nv",
@@ -69,7 +69,7 @@ If you don't want the plugin to create a keymap:
 ```lua
 return {
   {
-    "sevdev/neovide-update-check.nvim",
+    "sevkos/neovide-update-check.nvim",
     lazy = false,
     opts = {
       keymap = false,
@@ -114,4 +114,4 @@ The plugin also displays a notification when the update check starts.
 
 ## License
 
-MIT
+This project is licensed under the GNU General Public License v3.0.
