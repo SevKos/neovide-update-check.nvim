@@ -43,6 +43,7 @@ The default configuration is:
 ```lua
 {
   keymap = "<leader>pn",
+  check_on_startup = false,
 }
 ```
 

@@ -2,6 +2,7 @@ local M = {}
 
 M.config = {
 	keymap = "<leader>pn",
+	check_on_startup = false,
 }
 function M.setup(opts)
 	M.config = vim.tbl_deep_extend("force", M.config, opts or {})
@@ -10,6 +11,10 @@ function M.setup(opts)
 		vim.keymap.set("n", M.config.keymap, M.check_update, {
 			desc = "Check Neovide for updates",
 		})
+	end
+
+	if M.config.check_on_startup then
+		M.check_update()
 	end
 end
 
